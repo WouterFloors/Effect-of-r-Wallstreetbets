@@ -38,10 +38,8 @@ The comment section and awards might affect the display of data for Reddit API. 
 For Reddit API, the identifiers we are interested to gather are permalink, title, the content of the post, author, upvotes and upvote ration, image, total awards received and flair, number of comments and the datetime. 
 For R/WallstreetBets API is the sentiment score of the post, the linked stock name,
 
-Reddit API can collect the data for top today for example, which starts from the current instance and cover the whole day. R/WallstreetBets API can collect the information from 15 minutes before and it is updated every 15 minutes.
-
 ###Sampling, construct measurement and data structure (5%)
-Both Reddit API and R/WallstreetBets API data will be saved in a csv file for each single day. The constructs of interest be measured with the available data for Reddit API and for the R/WallstreetBets API, the sentiment has a continuous measurement and can be used when combined with other APIs.
+
 
 ###Data inspection per entity (10%)
 
