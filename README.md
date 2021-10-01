@@ -27,13 +27,18 @@ Data on every single stock price and volume
 ## 1.2 Composition 
 
 ###Entities, linkages, timeframe and algorithmic biases
+
 With Reddit API, the information like the contents for each user's posts are avaliable, such as images, text, upvotes, downvotes, comments and the information about user himself.
-With R/WallstreetBets API, the focus of information is the number of comments, sentiment, sentiment score, ticker. There are around 50 instances of an entity, such as “url”, “upvote_ratio” etc, are avaliable and can all be retrieved with Reddit API. For R/WallstreetBets AP, there are 4 entitles that can be retrieved via tickers. 
-In the Reddit API, the contents of the post like images, upvotes/downvotes and comments forms the posts and the contents of posts linked to the its author/user within the community and to the external entities. By using R/WallstreetBets API, the sentiment and number of comments per ticker (stock) is stored and a sentiment score is retrieved. The sentiment of the post can be linked via the ticker entity that links with corresponding stock. Reddit API can collect the data for top today for example, which starts from the current instance and cover the whole day. R/WallstreetBets API can collect the information from 15 minutes before and it is updated every 15 minutes.The comment section and awards might affect the display of data for Reddit API. All the raw data can be transformed for both Reddit API and R/WallstreetBets API. 
+With R/WallstreetBets API, the focus of information is the number of comments, sentiment, sentiment score, ticker. There are more than 50 instances of an entity, such as “url”, “upvote_ratio” etc, are avaliable and can all be retrieved with Reddit API. For R/WallstreetBets AP, there are 4 entitles that can be retrieved via tickers. We are aiming to gather the date for the whole set, which is the posts data that are available for the entire day. 
+In the Reddit API, the contents of the post like images, upvotes/downvotes and comments forms the posts and the contents of posts linked to the its author/user within the community and to the external entities. By using R/WallstreetBets API, the sentiment and number of comments per ticker (stock) is stored and a sentiment score is retrieved.
+The sentiment of the post can be linked via the ticker entity that links with corresponding stock. 
+The comment section and awards might affect the display of data for Reddit API. All the raw data can be transformed for both Reddit API and R/WallstreetBets API. 
 
 ###Identifiers (E.g. number of comments, sentiment, ticker etc.)
 For Reddit API, the identifiers we are interested to gather are permalink, title, the content of the post, author, upvotes and upvote ration, image, total awards received and flair, number of comments and the datetime. 
 For R/WallstreetBets API is the sentiment score of the post, the linked stock name,
+
+Reddit API can collect the data for top today for example, which starts from the current instance and cover the whole day. R/WallstreetBets API can collect the information from 15 minutes before and it is updated every 15 minutes.
 
 ###Sampling, construct measurement and data structure (5%)
 Both Reddit API and R/WallstreetBets API data will be saved in a csv file for each single day. The constructs of interest be measured with the available data for Reddit API and for the R/WallstreetBets API, the sentiment has a continuous measurement and can be used when combined with other APIs.
